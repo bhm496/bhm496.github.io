@@ -121,15 +121,75 @@ img {
   Japanin suosituimmilta brändeiltä. TERVERTULOA TUTUSTUMAAN</h4>
  <div class="bottom content">
 
-  <p>Kohta on kesä, älä unohta aurinkovoidetta kesällä &#128525; </p>
-  <img src="ala.jpg" alt="HTML5 Icon" style="width:640px;height:360px;">
 
-  <p>K-pop tähtien suosittu huulivoide</p>
-  <img src="s lip balm.jpg" alt="HTML5 Icon" style="width:640px;height:360px;">
-  <p>
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 3</div>
+      <img src="ala.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 3</div>
+      <img src="glass-5262911_640.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 3</div>
+      <img src="woman-.jpg" style="width:100%">
+    </div>
 
-    <p>Ole erilainen, saat meiltä vinkit ihollesi.</p>
-    <img src="makeup-739672_640.jpg" alt="HTML5 Icon" style="width:469px ; height: 640px;">
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="ala.jpg" style="width:100%" onclick="currentSlide(1)" alt="Kohta on kesä, älä unohta aurinkovoidetta kesällä &#128525">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="glass-5262911_640.jpg" style="width:100%" onclick="currentSlide(2)" alt="K-pop tähtien suosittu huulivoide">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="woman-.jpg" style="width:100%" onclick="currentSlide(3)" alt="Ole erilainen, saat meiltä vinkit ihollesi">
+    
+  </div>
+</div>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+
+  
     <ul>
       <li><a href="">Toimitus ja palautus</a></li>
       <li><a href="">Asiakaspalvelu</a></li>
