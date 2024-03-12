@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <link rel="stylesheet" href="tyyli.css">
+  <style>
+    body {
+      background-image: url("woman-2498668_1920.jpg") ;
+    }
+  
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Of Me</title>
+</head>
+<body>
+  <h1>Beauty Of Me</h1>
+  <nav class ="navbar">
+    <ul>
+      <li><a href="index.html">Kotisivu</a> </li>
+      <li><a href="Ihonhoito.html">Ihonhoito</a></li>
+      <li><a href="Meikki.html">Meikki</a></li>
+      <li><a href="Yhteystiedot.html">Yhteystiedot</a></li>
+      <li><a href="Ostoskori.html">Ostoskori</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h3>Korealainen ja japanilainen kosmetiikka ja ihonhoito</h3>
+  </main>
+<p> Parhaat korealaista ja japanilaista ihonhoitotuotteet. Kaikille löytyy
+  jotain. 
+</p>
+
+  <div class="row">
+    <div class="column">
+      <img src="serumi.jpg" alt="serum" style="width:100%">
+    </a>
+    <div class="desc">Seerumit</div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img src="toner.jpg" alt="toneri" style="width:100%">
+    </a>
+    <div class="desc">Kasvovesi</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img src="wash.jpg" alt="facewash" style="width:100%">
+    </a>
+    <div class="desc">Puhdistus</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img src="cream.jpg" alt="toneri" style="width:100%">
+    </a>
+    <div class="desc">Kasvovoiteet</div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="column">
+      <img src="eye cream.jpg" alt="toneri" style="width:100%">
+    </a>
+    <div class="desc">Silmäympärysvoiteet</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img src="lip balm.jpg" alt="lip balm" style="width:100%">
+    </a>
+    <div class="desc">Huulirasvat ja naamiot</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img src="mask.jpg" alt="lip balm" style="width:100%">
+    </a>
+    <div class="desc">Naamiot</div>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="column">
+      <img src="sunscreen.png" alt="lip balm" style="width:100%">
+    </a>
+    <div class="desc">Aurinkovoiteet</div>
+    </div>
+  </div>
+
+  
+  
+</body>
+</html>
